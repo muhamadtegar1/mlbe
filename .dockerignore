@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Jupyter Notebooks
+*.ipynb
+.ipynb_checkpoints
+
+# Data files
+*.csv
+
+# BentoML
+bentofile.yaml
+bentoml_configuration.yaml
+service.py
+catboost_info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+README.md
+BENTOML_SETUP.md
+*.md
+
+# Test files
+test_*.json
+check_server.*
+
+# Build artifacts
+build/
+dist/
+*.egg-info/

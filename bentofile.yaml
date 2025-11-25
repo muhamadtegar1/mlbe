@@ -1,0 +1,21 @@
+service: "service:BankMarketingPredictor"
+labels:
+  owner: mlbe-team
+  project: bank-marketing-prediction
+description: "Bank Marketing Prediction API with Random Forest and CatBoost models"
+
+include:
+  - "service.py"
+  - "transformers.py"
+
+python:
+  packages:
+    - scikit-learn
+    - pandas
+    - numpy
+    - catboost
+    - pydantic
+    - joblib
+
+docker:
+  python_version: "3.11"

@@ -1,0 +1,27 @@
+{
+  "model": "random_forest",
+  "data": [
+    {
+      "age": 56,
+      "job": "housemaid",
+      "marital": "married",
+      "education": "basic.4y",
+      "default": "no",
+      "housing": "no",
+      "loan": "no",
+      "contact": "telephone",
+      "month": "may",
+      "day_of_week": "mon",
+      "duration": 261,
+      "campaign": 1,
+      "pdays": 999,
+      "previous": 0,
+      "poutcome": "nonexistent",
+      "emp_var_rate": 1.1,
+      "cons_price_idx": 93.994,
+      "cons_conf_idx": -36.4,
+      "euribor3m": 4.857,
+      "nr_employed": 5191.0
+    }
+  ]
+}

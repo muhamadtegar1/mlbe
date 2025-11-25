@@ -1,0 +1,18 @@
+[project]
+name = "mlbe"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "bentoml>=1.4.29",
+    "catboost>=1.2.8",
+    "dill>=0.4.0",
+    "fastapi[standard]>=0.121.3",
+    "lightgbm>=4.6.0",
+    "matplotlib>=3.10.7",
+    "pandas>=2.3.3",
+    "scikit-learn>=1.7.2",
+    "seaborn>=0.13.2",
+    "xgboost>=3.1.2",
+]
