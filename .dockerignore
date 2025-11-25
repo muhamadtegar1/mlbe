@@ -17,9 +17,7 @@ ENV/
 *.csv
 
 # BentoML
-bentofile.yaml
-bentoml_configuration.yaml
-service.py
+bentoml/
 catboost_info/
 
 # IDE

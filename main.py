@@ -64,8 +64,8 @@ class CyclicalFeatureTransformer(BaseEstimator, TransformerMixin):
 
 # CRITICAL: Register custom transformers in __main__ module for joblib unpickling
 # This ensures joblib can find these classes when loading the pickled models
-sys.modules['__main__'].CustomImputer = CustomImputer
-sys.modules['__main__'].CyclicalFeatureTransformer = CyclicalFeatureTransformer
+sys.modules['__main__'].CustomImputer = CustomImputer  # type: ignore
+sys.modules['__main__'].CyclicalFeatureTransformer = CyclicalFeatureTransformer  # type: ignore
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -76,7 +76,7 @@ app = FastAPI(
 
 # Load models at startup
 try:
-    rf_model = joblib.load("random_forest_pipeline.joblib")
+    rf_model = joblib.load("./random_forest_pipeline.joblib")
     print("✓ Random Forest model loaded successfully")
 except Exception as e:
     print(f"✗ Error loading Random Forest model: {e}")
@@ -84,7 +84,7 @@ except Exception as e:
 
 try:
     cb_classifier = CatBoostClassifier()
-    cb_classifier.load_model("catboost_model.cbm")
+    cb_classifier.load_model("./modelcatboost_model.cbm")
     # Load the preprocessing pipeline from Random Forest (same preprocessing for both)
     cb_preprocessor = joblib.load("random_forest_pipeline.joblib").named_steps['preprocessor_final']
     print("✓ CatBoost model loaded successfully")
