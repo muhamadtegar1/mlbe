@@ -27,9 +27,7 @@ RUN uv pip install --system --no-cache \
     uvicorn
 
 # Copy application files
-COPY main.py ./
-COPY random_forest_pipeline.joblib ./
-COPY catboost_model.cbm ./
+COPY . ./
 
 # Expose port for FastAPI
 EXPOSE 8000
