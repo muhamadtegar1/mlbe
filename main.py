@@ -84,7 +84,7 @@ except Exception as e:
 
 try:
     cb_classifier = CatBoostClassifier()
-    cb_classifier.load_model("./modelcatboost_model.cbm")
+    cb_classifier.load_model("./catboost_model.cbm")
     # Load the preprocessing pipeline from Random Forest (same preprocessing for both)
     cb_preprocessor = joblib.load("random_forest_pipeline.joblib").named_steps['preprocessor_final']
     print("✓ CatBoost model loaded successfully")
